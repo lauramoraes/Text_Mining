@@ -1,0 +1,19 @@
+- Abrir o Anaconda Prompt
+- Ir para a pasta desejada (dir)
+ 
+- No terminal, rodar os comandos:
+
+conda create -n cluster_env python=3 jupyter scikit-learn pandas
+
+activate cluster_env
+conda config --add channels r
+conda install r
+conda install rpy2
+R
+- Dentro do R, rode os seguintes comandos:
+install.packages("devtools")
+devtools::install_github("IRkernel/IRkernel")
+IRkernel::installspec()
+quit()
+- Depois de fechado o R, de volta a linha de comando, digite:
+jupyter lab
